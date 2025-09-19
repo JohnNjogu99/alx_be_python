@@ -1,9 +1,9 @@
 # task_reminder.py
 
 # Prompt user for task details
-task = input("Enter the task description: ")
-priority = input("Enter the task priority (high/medium/low): ").lower()
-time_bound = input("Is the task time-bound? (yes/no): ").lower()
+task = input("Enter your task: ")
+time_bound = input("Is it time-bound? (yes/no): ").lower()
+priority = input("Priority (high/medium/low): ").lower()
 
 # Process based on priority using match case
 match priority:
