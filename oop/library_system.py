@@ -8,7 +8,7 @@ class Book:
 
     def __str__(self):
         """Return a readable string representation of the book."""
-        return f"'{self.title}' by {self.author}"
+        return f"Book: {self.title} by {self.author}"
 
 
 class EBook(Book):
@@ -19,7 +19,7 @@ class EBook(Book):
 
     def __str__(self):
         """Return a readable string representation of the EBook."""
-        return f"EBook: '{self.title}' by {self.author}, File size: {self.file_size}MB"
+        return f"EBook: {self.title} by {self.author}, File Size: {self.file_size}KB"
 
 
 class PrintBook(Book):
@@ -30,7 +30,7 @@ class PrintBook(Book):
 
     def __str__(self):
         """Return a readable string representation of the PrintBook."""
-        return f"PrintBook: '{self.title}' by {self.author}, Pages: {self.page_count}"
+        return f"PrintBook: {self.title} by {self.author}, Page Count: {self.page_count}"
 
 
 class Library:
@@ -44,9 +44,5 @@ class Library:
 
     def list_books(self):
         """Print details of each book in the library."""
-        if not self.books:
-            print("The library has no books.")
-        else:
-            print("Library Collection:")
-            for book in self.books:
-                print(f" - {book}")
+        for book in self.books:
+            print(book)
